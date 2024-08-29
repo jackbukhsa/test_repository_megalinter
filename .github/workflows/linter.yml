@@ -28,10 +28,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install black flake8
 
-    - name: Install MegaLinter
-      run: |
-        npm install -g mega-linter
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' # Use the latest LTS version or as needed
 
     - name: Run MegaLinter
-      run: mega-linter --install && mega-linter
+      run: npx mega-linter --install && npx mega-linter
 
