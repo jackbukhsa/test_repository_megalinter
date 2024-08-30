@@ -1,0 +1,47 @@
+# MegaLinter configuration file
+# Documentation: https://nvuillam.github.io/mega-linter/
+
+# List of linters to use
+enabled_linters:
+  - PYLINT
+  - FLAKE8
+  - BLACK
+  - MYPY
+  - BANDIT
+
+# Python-specific settings
+PYTHON_VERSION: "3.9"
+PYLINT_ARGS: "--disable=C0114,C0115,C0116"
+FLAKE8_ARGS: "--max-line-length=88"
+
+# Exclude specific files or directories
+file_extensions:
+  python: [ ".py" ]
+
+# Set the path to your project’s source code
+project:
+  base_dir: .
+  python_dirs: ["src", "tests"]
+
+# Define the file extensions to lint
+file_extensions:
+  - py
+
+# Enable autofixing (if supported by the linter)
+fixer:
+  autofix: true
+
+# Disable specific rules (example for Pylint)
+pylint_rules:
+  disable:
+    - C0111  # Missing docstring
+
+# CI configuration
+ci:
+  use: true
+
+# Customize report output
+reporter:
+  format: html
+  write_report: true
+
