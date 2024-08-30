@@ -1,13 +1,15 @@
 # MegaLinter configuration file
 # Documentation: https://nvuillam.github.io/mega-linter/
 
-# List of linters to use
-enabled_linters:
-  - PYLINT
-  - FLAKE8
-  - BLACK
-  - MYPY
-  - BANDIT
+DISABLE_LINTERS: all
+
+# Enable only the Python linters
+ENABLE_LINTERS:
+  - PYTHON_PYLINT
+  - PYTHON_BLACK
+  - PYTHON_FLAKE8
+  - PYTHON_ISORT
+  - PYTHON_MYPY
 
 # Python-specific settings
 PYTHON_VERSION: "3.9"
