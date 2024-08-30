@@ -29,7 +29,7 @@ file_extensions:
 
 # Enable autofixing (if supported by the linter)
 fixer:
-  autofix: true
+  autofix: false
 
 # Disable specific rules (example for Pylint)
 pylint_rules:
