@@ -11,5 +11,5 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Run MegaLinter
-      run: docker run --rm -v $(pwd):/tmp/lint oxsecurity/megalinter-python
+      run: docker run --rm -v $(pwd):/tmp/lint oxsecurity/megalinter-python:v8.0.0
 
