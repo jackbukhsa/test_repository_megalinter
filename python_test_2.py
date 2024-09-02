@@ -2,6 +2,7 @@ import os
 
 print(os.getwd())
 
+
 def example_function(param1, param2):
     # This function has several issues
     if param1 == param2:
