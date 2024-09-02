@@ -16,9 +16,9 @@ def example_function(param1, param2):
     if param1 == param2:
         print("Parameters are equal")
         return True
-    else:
-        print("Parameters are not equal")
-        return False
+
+    print("Parameters are not equal")
+    return False
 
 
 def main(): 
