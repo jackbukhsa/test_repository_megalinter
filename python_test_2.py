@@ -16,7 +16,6 @@ def example_function(param1, param2):
 def main():
     example_function("hello", "world")
     print("This is a test")
-    import datetime  # unnecessary import
 
     a = 1
     b = 2
