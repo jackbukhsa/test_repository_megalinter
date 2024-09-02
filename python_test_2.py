@@ -1,5 +1,6 @@
 import os, sys
 
+print(os.getwd())
 
 def example_function(param1, param2):
     # This function has several issues
