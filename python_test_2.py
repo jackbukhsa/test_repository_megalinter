@@ -21,7 +21,7 @@ def example_function(param1, param2):
     return False
 
 
-def main(): 
+def main():
     """
     This is the main function that will call the example function 
     """
