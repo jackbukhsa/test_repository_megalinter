@@ -8,6 +8,10 @@ print(os.getcwd())
 
 
 def example_function(param1, param2):
+
+    """
+    This is an example function that will compare two prints and see if they are equal 
+    """
     # This function has several issues
     if param1 == param2:
         print("Parameters are equal")
@@ -17,7 +21,11 @@ def example_function(param1, param2):
         return False
 
 
-def main():
+def main(): 
+    """
+    This is the main function that will call the example function 
+    """
+
     example_function("hello", "world")
     print("This is a test")
 
