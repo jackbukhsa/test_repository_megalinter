@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Record Start time 
+      id: start-time 
+      run: echo "start_time=$(date +%s)" >> $GITHUB_ENV 
+
+
     - name: Checkout code
       uses: actions/checkout@v3
 
@@ -32,4 +37,13 @@ jobs:
       uses: mega-linter/mega-linter-action@v7
       with:
         config: '.mega-linter.yml'
+
+    - name: Record end time and calculate duration 
+      run: | 
+        end_time=$(date +%s)
+        start_time=${{env.start_time }} 
+        duration=$((end_time - start_time))
+        echo "Job completed in $duration seconds"
+
+          
 
