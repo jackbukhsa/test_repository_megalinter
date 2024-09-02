@@ -10,9 +10,16 @@ print(os.getcwd())
 
 def example_function(param1, param2):
     """
-    This is an example function that will compare two prints and see if they are equal
+    This function compares two prints to check if they are equal.
+
+    Args:
+        print1 (type): Description of print1.
+        print2 (type): Description of print2.
+
+    Returns:
+        bool: True if the prints are equal, False otherwise.
     """
-    # This function has several issues
+
     if param1 == param2:
         print("Parameters are equal")
         return True
