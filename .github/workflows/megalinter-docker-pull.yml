@@ -6,10 +6,21 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-    steps:
+    steps: 
+
+    - name: Capture Time 
+      id: start-time 
+      run: echo "start_time=$(date +%s)" >> $GITHUB_ENV 
+  
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Run MegaLinter
       run: docker run --rm -v $(pwd):/tmp/lint oxsecurity/megalinter-python:v8.0.0
 
+    - name: Record end time and calculate duration 
+      run: | 
+        end_time=$(date +%s)
+        start_time=${{ env.start_time }} 
+        duration=$(( end_time - start_time))
+        echo "Job completed in $duration seconds"
