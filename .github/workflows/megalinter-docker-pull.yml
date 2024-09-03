@@ -1,4 +1,4 @@
-name: Lint
+name: Megalinter Docker Image Pull
 
 on: [push, pull_request]
 
